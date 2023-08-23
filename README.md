@@ -16,4 +16,12 @@ This Facial Attendance Platform uses InsightFace API and Maching learning search
 ## Screenshots
 
 ![Screenshot 1](screenshots/screenshot1.png)
+![Screenshot 1](screenshots/screenshot2.png)
+![Screenshot 1](screenshots/screenshot3.png)
+![Screenshot 1](screenshots/screenshot4.png)
+![Screenshot 1](screenshots/screenshot5.png)
+![Screenshot 1](screenshots/screenshot6.png)
+![Screenshot 1](screenshots/screenshot7.png)
+![Screenshot 1](screenshots/screenshot8.png)
+![Screenshot 1](screenshots/screenshot9.png)
 
