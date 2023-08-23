@@ -6,3 +6,4 @@ jupyter
 opencv-python
 streamlit
 redis
+insightface
