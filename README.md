@@ -18,8 +18,7 @@ This Facial Attendance Platform uses InsightFace API and Maching learning search
 ### First step: Detect each face
 ![Screenshot 1](screenshots/screenshot2.png)
 
-### Second step: Extract features of each face
-![Screenshot 1](screenshots/screenshot3.png)
+### Second step: Extract features of each face with predicted accuracy
 ![Screenshot 1](screenshots/screenshot4.png)
 ![Screenshot 1](screenshots/screenshot5.png)
 ![Screenshot 1](screenshots/screenshot6.png)
