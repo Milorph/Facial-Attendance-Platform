@@ -23,12 +23,11 @@ This Facial Attendance Platform uses InsightFace API and Maching learning search
 ### Third step: Detect unknown faces that we have not trained our model for
 ![Screenshot 1](screenshots/screenshot5.png)
 
-#Web Application Design 
 
-## Face Prediction to detect that model is working
+## Reporting Module
 ![Screenshot 1](screenshots/screenshot6.png)
-
+## Registration Form
 ![Screenshot 1](screenshots/screenshot7.png)
-![Screenshot 1](screenshots/screenshot8.png)
+## Real-time face prediction with registered user collected from 5-10 video of myself and collecting samples to train our model
 ![Screenshot 1](screenshots/screenshot9.png)
 
