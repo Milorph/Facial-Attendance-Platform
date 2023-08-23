@@ -8,3 +8,4 @@ streamlit
 redis
 insightface
 onnxruntime
+streamlit-webrtc
