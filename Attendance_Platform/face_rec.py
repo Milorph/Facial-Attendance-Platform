@@ -3,6 +3,7 @@ import pandas as pd
 import cv2
 import os
 import redis
+import logging
 
 # Insight face
 
@@ -35,6 +36,18 @@ def retrieve_data(name):
     retrieve_df.columns = ['name_role','facial_features']
     retrieve_df[['Name','Role']] = retrieve_df['name_role'].apply(lambda x: x.split('@')).apply(pd.Series)
     return retrieve_df[['Name','Role','facial_features']]
+
+def retrieve_name(name):
+    retrieve_dict = r.hgetall(name)
+    retrieve_series = pd.Series(retrieve_dict)
+    retrieve_series = retrieve_series.apply(lambda x: np.frombuffer(x,dtype=np.float32))
+    index = retrieve_series.index
+    index = list(map(lambda x: x.decode(), index))
+    retrieve_series.index = index
+    retrieve_df = retrieve_series.to_frame().reset_index()
+    retrieve_df.columns = ['name_role','facial_features']
+    retrieve_df[['Name','Role']] = retrieve_df['name_role'].apply(lambda x: x.split('@')).apply(pd.Series)
+    return list(retrieve_df['Name'])
 
 # Configure face analysis
 faceapp = FaceAnalysis(name='buffalo_sc', roo ='insightFace_model', providers=['CPUExecutionProvider'])
@@ -195,5 +208,26 @@ class RegistrationForm:
         self.reset()
         
         return True
+    
+    def delete_data_in_redis_db(self, name, role):
+        try:
+            # Validation name
+            if role is not None and name is not None:
+                    key = name
+                    if r.hexists('academy:register', key):
+                        r.hdel('academy:register', key)
+                        logging.info(f"Deleted {key} from academy:register")
+                        return True
+                    else:
+                        logging.warning(f"{key} not found in academy:register")
+                        return False
+            else:
+                logging.warning("Empty name provided")
+                return False
+        except Exception as e:
+            logging.error(f"An error occurred: {str(e)}")
+        
+        return False
+    
         
     

@@ -6,7 +6,7 @@ st.subheader("Reporting Log")
 
 # Retrieve logs and data and show in Report.py
 # Extract data from the redis list
-
+ 
 name = 'attendance:logs'
 def load_logs(name,end=-1):
   logs_list = face_rec.r.lrange(name,start=0,end=end) # Extracting all data from redis database
