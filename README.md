@@ -4,7 +4,7 @@
 
 Facial Attendance Platform is a Python-based web application that uses OpenCV, Redis, and Streamlit to streamline the process of tracking attendance using facial recognition.
 
-This Facial Attendance Platform uses InsightFace API and Maching learning searching algorithms to accruately detect facial features that uniquely identifies a person.
+This Facial Attendance Platform uses InsightFace API and Maching learning searching algorithms to accurately detect facial features that uniquely identifies a person.
 
 ## Features
 
