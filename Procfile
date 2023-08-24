@@ -1,1 +1,1 @@
-web: streamlit run Home.py
+web: streamlit run Attendance-Platform/Home.py
