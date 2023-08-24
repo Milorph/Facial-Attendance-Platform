@@ -15,7 +15,7 @@ This Facial Attendance Platform uses InsightFace API and Maching learning search
 - [x] Registration form using webcam to collect samples
 - [x] Reporting modules that has real-time updates when a person is marked for attendance  
 
-## DEMO
+# DEMO
 
 ## Initally, your face features have not been registered.
 ![Screenshot 1](screenshots/screenshot1.png)
