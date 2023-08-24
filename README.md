@@ -22,12 +22,12 @@ This Facial Attendance Platform uses InsightFace API and Maching learning search
 
 ## Register your face using the registration form to collect samples, takes only a few seconds!
 ![Screenshot 1](screenshots/screenshot2.png)
-## Go back to the face prediction to mark your attendance. Attendance is marked every 10 seconds.
+## Go back to the face prediction to mark your attendance. Attendance is marked every 10s.
 ![Screenshot 1](screenshots/screenshot3.png)
 
 ## Attendance will be recorded in the reporting module.
-![Screenshot 1](screenshots/screenshot6.png)
+![Screenshot 1](screenshots/screenshot4.png)
 ## In case an employee/student has left/graduated. You can remove their data simply by clicking on a few selections
-![Screenshot 1](screenshots/screenshot7.png)
+![Screenshot 1](screenshots/screenshot5.png)
 
 
