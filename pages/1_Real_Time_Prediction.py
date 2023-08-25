@@ -3,6 +3,17 @@ from Home import face_rec
 from streamlit_webrtc import webrtc_streamer
 import av
 import time
+import os
+
+from twilio.rest import Client
+
+# Find your Account SID and Auth Token at twilio.com/console
+# and set the environment variables. See http://twil.io/secure
+account_sid = os.environ['AC022c4944e9902bf04423ae08f4703c3e']
+auth_token = os.environ['a44bcaf3cf5c9aa64566730ffd6e2656']
+client = Client(account_sid, auth_token)
+
+token = client.tokens.create()
 
 st.set_page_config(page_title="Predictions",layout='centered')
 st.subheader("Real-Time Attendance System")
