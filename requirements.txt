@@ -9,3 +9,4 @@ redis
 insightface
 onnxruntime
 streamlit-webrtc
+twilio
