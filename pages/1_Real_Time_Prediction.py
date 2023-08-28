@@ -3,17 +3,10 @@ from Home import face_rec
 from streamlit_webrtc import webrtc_streamer
 import av
 import time
-import os
-
-from twilio.rest import Client
 
 # Find your Account SID and Auth Token at twilio.com/console
 # and set the environment variables. See http://twil.io/secure
-account_sid = os.environ['TWILIO_ACCOUNT_SID']
-auth_token = os.environ['TWILIO_AUTH_TOKEN']
-client = Client(account_sid, auth_token)
 
-token = client.tokens.create()
 
 st.set_page_config(page_title="Predictions",layout='centered')
 st.subheader("Real-Time Attendance System")
@@ -27,7 +20,7 @@ st.success("Data sucessfully received from Redis DB")
 
 
 # time
-waitTime = 10 # time in seconds
+waitTime = 5 # time in seconds
 setTime = time.time()
 realtimepred = face_rec.RealTimePred() # Instantiate the class
 
@@ -56,6 +49,8 @@ def video_frame_callback(frame):
       setTime = time.time() # Reset time
       
       print('Save Data to redis')
+      
+      webrtc_streamer.stop(key="realtimePrediction")
 
     return av.VideoFrame.from_ndarray(pred_img, format="bgr24")
 
